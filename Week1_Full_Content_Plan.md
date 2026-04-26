@@ -72,6 +72,10 @@ This document contains the fully detailed content drafts and media requirements 
 **Caption (Greek):**
 > Η μεταμόρφωση ενός χαμόγελου είναι τέχνη. 🎨✨
 > Κάθε χαμόγελο που σχεδιάζουμε στο i-Smile είναι μοναδικό. Είτε πρόκειται για όψεις πορσελάνης είτε για λεύκανση, το αποτέλεσμα είναι πάντα φυσικό και λαμπερό.
+> 
+> **CTA Setup (Instagram):**
+> - Action: Ensure "Link in bio" is prominent.
+> - Link to Verify: `https://www.i-smile.gr/`
 
 ---
 
@@ -95,6 +99,9 @@ This document contains the fully detailed content drafts and media requirements 
 **Copy (Greek):**
 > **Τι να περιμένετε κατά τη διαδικασία τοποθέτησης εμφυτεύματος;**
 > Η ενημέρωση είναι δύναμη. Η διαδικασία ξεκινά με 3D κλινικό έλεγχο. Η τοποθέτηση είναι ελάχιστα επεμβατική και η επούλωση παρακολουθείται στενά για τέλεια οστεοενσωμάτωση.
+> 
+> **Κουμπί (CTA)**: Κράτηση / Book
+> **Σύνδεσμος**: `https://www.dentplant.gr/booking.html`
 
 ### ✨ 02_Cosmetic Division: i-Smile (Instagram Story Poll)
 **Strategic Voice:** Aesthetic Luxury (Interactive)
@@ -103,6 +110,7 @@ This document contains the fully detailed content drafts and media requirements 
 
 **Interactive Elements:**
 - **Poll**: Λεύκανση (Λάμψη!) | Όψεις (Τελειότητα!)
+- **CTA Setup (Instagram)**: Add text prompt asking users to send a Direct Message (DM) for consultation.
 
 ---
 
@@ -116,6 +124,9 @@ This document contains the fully detailed content drafts and media requirements 
 **Copy (Greek):**
 > **Δέσμευση στη Συνεχιζόμενη Κλινική Αριστεία**
 > Επενδύουμε διαρκώς στη συνεχιζόμενη εκπαίδευση και τα κορυφαία παγκόσμια ιατρικά πρωτόκολλα για την πιο προηγμένη φροντίδα στην Αθήνα.
+> 
+> **Κουμπί (CTA)**: Μάθετε περισσότερα / Learn More
+> **Σύνδεσμος**: `https://www.dentplant.gr/`
 
 ### ✨ 02_Cosmetic Division: i-Smile (Instagram Reel)
 **Strategic Voice:** Aesthetic Luxury
@@ -123,6 +134,20 @@ This document contains the fully detailed content drafts and media requirements 
 - `[PENDING_USER_CLIP_DAY6_1]`: Detail of clinic lounge amenities.
 - `[PENDING_USER_CLIP_DAY6_2]`: Shade guide consultation close-up.
 - `[PENDING_USER_CLIP_DAY6_3]`: Patient smiling in mirror.
+
+**Reel Overlays (Greek):**
+- Clip 1: Οι λεπτομέρειες κάνουν τη διαφορά ☕
+- Clip 2: Σχεδιασμός με απόλυτη ακρίβεια 💎
+- Clip 3: Το αποτέλεσμα που αξίζετε ✨
+
+**Caption (Greek):**
+> Μια ματιά πίσω από την απόλυτη εμπειρία i-Smile. 💫 
+> Η υψηλή αισθητική δεν αφορά μόνο το τελικό χαμόγελο, αλλά και τη φροντίδα, τον χώρο και την προσοχή στη λεπτομέρεια κατά τη διάρκεια της επίσκεψής σας. 
+> Κλείστε το ραντεβού σας και ζήστε τη διαφορά.
+> 
+> **CTA Setup (Instagram):**
+> - Action: Add "Link in bio" text to caption.
+> - Link to Verify: `https://www.i-smile.gr/`
 
 ---
 
