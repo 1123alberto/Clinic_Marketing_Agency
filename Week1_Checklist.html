@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Complete Checklist & Content Hub | Clinical Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --dentplant-blue: #0A2647;
+            --ismile-gold: #C5A059;
+            --tech-gray: #64748B;
+            --bg-light: #F8F9FA;
+            --text-dark: #2D3436;
+            --glass: rgba(255, 255, 255, 0.9);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--dentplant-blue);
+            margin-bottom: 10px;
+        }
+
+        .progress-container {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #E9ECEF;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--dentplant-blue), var(--ismile-gold));
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .day-section {
+            margin-bottom: 60px;
+        }
+
+        .day-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .dentplant-icon { color: var(--dentplant-blue); }
+        .ismile-icon { color: var(--ismile-gold); }
+        .tech-icon { color: var(--tech-gray); }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 12px;
+        }
+        
+        .checklist-item:hover {
+            background: rgba(0,0,0,0.02);
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #CBD5E0;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: white;
+            transition: var(--transition);
+        }
+
+        .checklist-item.checked .checkbox {
+            background: var(--dentplant-blue);
+            border-color: var(--dentplant-blue);
+        }
+
+        .checklist-item.ismile.checked .checkbox {
+            background: var(--ismile-gold);
+            border-color: var(--ismile-gold);
+        }
+
+        .checklist-item.tech.checked .checkbox {
+            background: var(--tech-gray);
+            border-color: var(--tech-gray);
+        }
+
+        .checkbox i {
+            color: white;
+            font-size: 10px;
+            display: none;
+        }
+
+        .checklist-item.checked .checkbox i {
+            display: block;
+        }
+
+        .item-text {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            transition: var(--transition);
+        }
+
+        .checklist-item.checked .item-text {
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .tag-media { background: #E3F2FD; color: #1E88E5; }
+        .tag-copy { background: #F3E5F5; color: #8E24AA; }
+        .tag-tech { background: #F1F2F6; color: var(--tech-gray); }
+
+        .content-box {
+            margin-top: 15px;
+            background: #F8F9FA;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .content-box-header {
+            background: #EDF2F7;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4A5568;
+        }
+
+        .copy-btn {
+            background: white;
+            border: 1px solid #CBD5E0;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .copy-btn:hover {
+            background: var(--dentplant-blue);
+            color: white;
+            border-color: var(--dentplant-blue);
+        }
+
+        .copy-btn.success {
+            background: #10B981;
+            color: white;
+            border-color: #10B981;
+        }
+
+        .content-text {
+            padding: 15px;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #4A5568;
+            white-space: pre-wrap;
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Week 1 Content Hub</h1>
+        <p>Complete 7-Day Checklist & Copy Repository</p>
+    </header>
+
+    <div class="progress-container">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600;">
+            <span>Overall Progress</span>
+            <span id="progress-text">0%</span>
+        </div>
+        <div class="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-section">
+        <div class="day-title">🗓️ Day 2: Authority & Engagement</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-hospital dentplant-icon"></i><h3>Dentplant (GBP)</h3></div>
+                <div class="tag tag-media">Media Required</div>
+                <div class="checklist-item" data-id="d2-d-m1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Photo: Surgical planning / 3D scans</div></div>
+                
+                <div class="tag tag-copy">Final Copy</div>
+                <div class="checklist-item" data-id="d2-d-c1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Mark text as published</div></div>
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <span>Greek Text</span>
+                        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+                    </div>
+                    <div class="content-text"><strong>Ολική Αποκατάσταση με Κλινική Ακρίβεια</strong>
+
+Η απώλεια δοντιών δεν χρειάζεται να είναι μόνιμη. Στη Dentplant, εφαρμόζουμε προηγμένα πρωτόκολλα εμφυτευματολογίας για την πλήρη αποκατάσταση του στόματος, εστιάζοντας στη μακροχρόνια σταθερότητα και τη βιολογική ενσωμάτωση. Με τη χρήση ψηφιακής καθοδήγησης, εξασφαλίζουμε απόλυτη χειρουργική ακρίβεια σε κάθε στάδιο της θεραπείας σας.
+
+Προγραμματίστε την κλινική σας αξιολόγηση σήμερα.
+
+#ΟλικήΑποκατάσταση #ΕμφυτεύματαΔοντιών #ΧειρουργικήΟδοντιατρική #Dentplant #Αθήνα</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-sparkles ismile-icon"></i><h3>i-Smile (IG Reel)</h3></div>
+                <div class="tag tag-media">Media Required</div>
+                <div class="checklist-item ismile" data-id="d2-i-m1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Clip 1: Modern lounge pan</div></div>
+                <div class="checklist-item ismile" data-id="d2-i-m2"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Clip 2: Consultation close-up</div></div>
+                <div class="checklist-item ismile" data-id="d2-i-m3"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Clip 3: Radiant smile final shot</div></div>
+                
+                <div class="tag tag-copy">Final Copy</div>
+                <div class="checklist-item ismile" data-id="d2-i-c1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Mark text as published</div></div>
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <span>Greek Text & Reel Overlays</span>
+                        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+                    </div>
+                    <div class="content-text"><strong>[Overlays]</strong>
+Clip 1: Η εμπειρία σας ξεκινά εδώ. ✨
+Clip 2: Εξατομικευμένη προσέγγιση για το δικό σας χαμόγελο.
+Clip 3: Ανακαλύψτε τη φυσική σας λάμψη.
+
+<strong>[Caption]</strong>
+Η διαδρομή προς το ιδανικό σας χαμόγελο πρέπει να είναι το ίδιο υπέροχη με το αποτέλεσμα. 💫 
+
+Στο i-Smile, επαναπροσδιορίζουμε την οδοντιατρική επίσκεψη. Από την πρώτη στιγμή που μπαίνετε στον χώρο μας, η εστίασή μας είναι στην άνεση, την αισθητική και τον σχεδιασμό ενός χαμόγελου που εκφράζει τον αληθινό σας εαυτό.
+
+Κλείστε το ραντεβού σας και ξεκινήστε την αλλαγή.
+#iSmileAthens #AestheticExperience #SmileMakeover #LuxuryDentistry #AthensVibe #ΑισθητικήΟδοντιατρική</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-section">
+        <div class="day-title">🗓️ Day 3: Social Proof & Trust</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-hospital dentplant-icon"></i><h3>Dentplant (GBP)</h3></div>
+                <div class="tag tag-media">Media Required</div>
+                <div class="checklist-item" data-id="d3-d-m1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Photo: Patient care / Handshake / Recovery Area</div></div>
+                
+                <div class="tag tag-copy">Final Copy</div>
+                <div class="checklist-item" data-id="d3-d-c1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Mark text as published</div></div>
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <span>Greek Text</span>
+                        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+                    </div>
+                    <div class="content-text"><strong>Άνεση και Ασφάλεια σε Κάθε Βήμα</strong>
+
+Στη Dentplant, κατανοούμε ότι η χειρουργική οδοντιατρική απαιτεί απόλυτη εμπιστοσύνη. Οι ασθενείς μας απολαμβάνουν μια ομαλή, ελεγχόμενη εμπειρία χάρη στα αυστηρά πρωτόκολλα διαχείρισης πόνου και τις ελάχιστα επεμβατικές τεχνικές μας. Προτεραιότητά μας είναι η μετεγχειρητική σας άνεση και η απόλυτη ασφάλεια.
+
+#ΟδοντιατρικήΜέριμνα #ΧειρουργικήΟδοντιατρική #ΑσφαλήςΕπέμβαση #Dentplant #Αθήνα</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-sparkles ismile-icon"></i><h3>i-Smile (IG Carousel)</h3></div>
+                <div class="tag tag-media">Media Required</div>
+                <div class="checklist-item ismile" data-id="d3-i-m1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Slide 1: After smile close-up</div></div>
+                <div class="checklist-item ismile" data-id="d3-i-m2"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Slide 2: Aesthetic detail shot</div></div>
+                
+                <div class="tag tag-copy">Final Copy</div>
+                <div class="checklist-item ismile" data-id="d3-i-c1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Mark text as published</div></div>
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <span>Greek Text</span>
+                        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+                    </div>
+                    <div class="content-text">Η μεταμόρφωση ενός χαμόγελου είναι τέχνη. 🎨✨
+
+Κάθε χαμόγελο που σχεδιάζουμε στο i-Smile είναι μοναδικό, προσαρμοσμένο στα χαρακτηριστικά και την προσωπικότητά σας. Είτε πρόκειται για όψεις πορσελάνης είτε για εξατομικευμένη λεύκανση, το αποτέλεσμα είναι πάντα φυσικό, λαμπερό και γεμάτο αρμονία.
+
+Κάντε το πρώτο βήμα για την αλλαγή που ονειρεύεστε. Link in bio.
+
+#SmileMakeover #VeneersAthens #AestheticDentistry #NaturalSmile #iSmileAthens</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-section">
+        <div class="day-title">🗓️ Day 4: Infrastructure Audit</div>
+        <div class="grid">
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-header"><i class="fa-solid fa-gears tech-icon"></i><h3>Conversion Machine Audit</h3></div>
+                <div class="tag tag-tech">Technical Tasks</div>
+                <div class="checklist-item tech" data-id="d4-t1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Verify Instagram Bio link destination (dentplant.gr & i-smile.gr)</div></div>
+                <div class="checklist-item tech" data-id="d4-t2"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Test GBP 'Book' button functionality</div></div>
+                <div class="checklist-item tech" data-id="d4-t3"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Confirm booking.html form leads arrive in CRM</div></div>
+                <div class="checklist-item tech" data-id="d4-t4"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Check for any 'Brand Bleed' site-wide</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-section">
+        <div class="day-title">🗓️ Day 5: Education & FAQ</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-hospital dentplant-icon"></i><h3>Dentplant (GBP)</h3></div>
+                <div class="tag tag-media">Media Required</div>
+                <div class="checklist-item" data-id="d5-d-m1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">High-quality educational visual (Model/3D Scan)</div></div>
+                
+                <div class="tag tag-copy">Final Copy</div>
+                <div class="checklist-item" data-id="d5-d-c1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Mark text as published</div></div>
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <span>Greek Text</span>
+                        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+                    </div>
+                    <div class="content-text"><strong>Τι να περιμένετε κατά τη διαδικασία τοποθέτησης εμφυτεύματος;</strong>
+
+Η ενημέρωση είναι δύναμη. Η διαδικασία ξεκινά με ενδελεχή 3D κλινικό έλεγχο. Η τοποθέτηση είναι ελάχιστα επεμβατική, με αυστηρά πρωτόκολλα τοπικής αναισθησίας και απόλυτα ελεγχόμενη. Η επούλωση παρακολουθείται στενά από την ιατρική ομάδα για τέλεια βιολογική ενσωμάτωση.
+
+#ΕμφυτεύματαΔοντιών #ΟδοντιατρικήΕνημέρωση #Γναθοχειρουργική #DentplantΑθήνα</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-sparkles ismile-icon"></i><h3>i-Smile (IG Story Poll)</h3></div>
+                <div class="tag tag-media">Media Required</div>
+                <div class="checklist-item ismile" data-id="d5-i-m1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Split graphic: Whitening vs Veneers</div></div>
+                
+                <div class="tag tag-copy">Final Copy</div>
+                <div class="checklist-item ismile" data-id="d5-i-c1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Mark text as published</div></div>
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <span>Greek Text & Poll</span>
+                        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+                    </div>
+                    <div class="content-text"><strong>[Story 1: Interactive Poll]</strong>
+Overlay Text: Λεύκανση ή Όψεις; Ποιος είναι ο στόχος σας;
+Poll Option 1: Λεύκανση (Λάμψη!)
+Poll Option 2: Όψεις (Τελειότητα!)
+
+<strong>[Story 2: Follow-up Prompt]</strong>
+Όποιος κι αν είναι ο στόχος σας, η ομάδα του i-Smile σχεδιάζει το ιδανικό πλάνο θεραπείας αποκλειστικά για εσάς. Στείλτε μας DM για μια εξατομικευμένη συμβουλευτική. ✨</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day-section">
+        <div class="day-title">🗓️ Day 6: Local Immersion</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-hospital dentplant-icon"></i><h3>Dentplant (GBP)</h3></div>
+                <div class="tag tag-media">Media Required</div>
+                <div class="checklist-item" data-id="d6-d-m1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Photo: Dr. Moshopoulos in action</div></div>
+                
+                <div class="tag tag-copy">Final Copy</div>
+                <div class="checklist-item" data-id="d6-d-c1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Mark text as published</div></div>
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <span>Greek Text</span>
+                        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+                    </div>
+                    <div class="content-text"><strong>Δέσμευση στη Συνεχιζόμενη Κλινική Αριστεία</strong>
+
+Η επιστήμη της εμφυτευματολογίας εξελίσσεται ραγδαία. Στη Dentplant, επενδύουμε διαρκώς στη συνεχιζόμενη εκπαίδευση και την ενσωμάτωση των κορυφαίων παγκόσμιων ιατρικών πρωτοκόλλων. Η αφοσίωσή μας στην κλινική αριστεία διασφαλίζει ότι οι ασθενείς μας λαμβάνουν την πιο προηγμένη και ασφαλή φροντίδα στην Αθήνα.
+
+#ΚλινικήΑριστεία #ΣυνεχιζόμενηΕκπαίδευση #ΟδοντιατρικήΕπιστήμη #Dentplant #Αθήνα</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header"><i class="fa-solid fa-sparkles ismile-icon"></i><h3>i-Smile (IG Reel)</h3></div>
+                <div class="tag tag-media">Media Required</div>
+                <div class="checklist-item ismile" data-id="d6-i-m1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Clips: Lounge, Shade Guide, Final Smile</div></div>
+                
+                <div class="tag tag-copy">Final Copy</div>
+                <div class="checklist-item ismile" data-id="d6-i-c1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Mark text as published</div></div>
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <span>Greek Text & Overlays</span>
+                        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+                    </div>
+                    <div class="content-text"><strong>[Overlays]</strong>
+Clip 1: Οι λεπτομέρειες κάνουν τη διαφορά ☕
+Clip 2: Σχεδιασμός με απόλυτη ακρίβεια 💎
+Clip 3: Το αποτέλεσμα που αξίζετε ✨
+
+<strong>[Caption]</strong>
+Μια ματιά πίσω από την απόλυτη εμπειρία i-Smile. 💫 
+
+Η υψηλή αισθητική δεν αφορά μόνο το τελικό χαμόγελο, αλλά και τη φροντίδα, τον χώρο και την προσοχή στη λεπτομέρεια κατά τη διάρκεια της επίσκεψής σας. 
+
+Κλείστε το ραντεβού σας και ζήστε τη διαφορά. Link in bio.
+
+#BehindTheScenes #LuxuryClinic #AthensDentist #SmileDesign #iSmileExperience</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-section">
+        <div class="day-title">🗓️ Day 7: Performance Review</div>
+        <div class="grid">
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-header"><i class="fa-solid fa-chart-line tech-icon"></i><h3>Campaign Analytics</h3></div>
+                <div class="tag tag-tech">Review Tasks</div>
+                <div class="checklist-item tech" data-id="d7-t1"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Review GBP click-through rate (CTR)</div></div>
+                <div class="checklist-item tech" data-id="d7-t2"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Analyze IG Story Poll engagement & DM volume</div></div>
+                <div class="checklist-item tech" data-id="d7-t3"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Tally total leads generated via booking.html</div></div>
+                <div class="checklist-item tech" data-id="d7-t4"><div class="checkbox"><i class="fa-solid fa-check"></i></div><div class="item-text">Select top performing post for Week 2 Paid Boost</div></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const items = document.querySelectorAll('.checklist-item');
+    const progressFill = document.getElementById('progress-fill');
+    const progressText = document.getElementById('progress-text');
+
+    function updateProgress() {
+        const checked = document.querySelectorAll('.checklist-item.checked').length;
+        const total = items.length;
+        const percentage = Math.round((checked / total) * 100);
+        progressFill.style.width = percentage + '%';
+        progressText.innerText = percentage + '%';
+        
+        const state = {};
+        items.forEach(item => { state[item.dataset.id] = item.classList.contains('checked'); });
+        localStorage.setItem('agency_content_hub_state', JSON.stringify(state));
+    }
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('checked');
+            updateProgress();
+        });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedState = JSON.parse(localStorage.getItem('agency_content_hub_state'));
+        if (savedState) {
+            items.forEach(item => { if (savedState[item.dataset.id]) item.classList.add('checked'); });
+            updateProgress();
+        }
+    });
+
+    function copyText(btn) {
+        const textNode = btn.parentElement.nextElementSibling;
+        const text = textNode.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            btn.innerText = 'Copied!';
+            btn.classList.add('success');
+            setTimeout(() => {
+                btn.innerText = 'Copy';
+                btn.classList.remove('success');
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
