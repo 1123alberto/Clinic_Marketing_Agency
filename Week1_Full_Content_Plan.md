@@ -27,24 +27,21 @@ This document contains the fully detailed content drafts and media requirements 
 > **Σύνδεσμος**: `https://www.dentplant.gr/booking.html`
 > **Hashtags**: #ΟλικήΑποκατάσταση #ΕμφυτεύματαΔοντιών #ΧειρουργικήΟδοντιατρική #Dentplant #Αθήνα
 
-### ✨ 02_Cosmetic Division: i-Smile (Instagram Reel Script)
+### ✨ 02_Cosmetic Division: i-Smile (Instagram Grid Post)
 **Strategic Voice:** Aesthetic Luxury
 **Media Required:**
-- `[PENDING_USER_CLIP_DAY2_1]`: Λήψη του μοντέρνου, φωτεινού χώρου αναμονής (Slow pan).
-- `[PENDING_USER_CLIP_DAY2_2]`: Κοντινό πλάνο σε χαλαρή συζήτηση (soft lighting, premium feel).
-- `[PENDING_USER_CLIP_DAY2_3]`: Lifestyle πλάνο ενός φυσικού, λαμπερού χαμόγελου.
-
-**Reel Overlays (Greek):**
-- Clip 1: Η εμπειρία σας ξεκινά εδώ. ✨
-- Clip 2: Εξατομικευμένη προσέγγιση για το δικό σας χαμόγελο.
-- Clip 3: Ανακαλύψτε τη φυσική σας λάμψη.
+- `[COMPLETED]`: Enhanced Office Boutique Photo (GEN_ROOM_officedesk_V1).
 
 **Caption (Greek):**
-> Η διαδρομή προς το ιδανικό σας χαμόγελο πρέπει να είναι το ίδιο υπέροχη με το αποτέλεσμα. 💫 
+> **Καλωσορίσατε στον χώρο όπου ξεκινά η μεταμόρφωση του χαμόγελου σας. ✨**
 > 
-> Στο i-Smile, επαναπροσδιορίζουμε την οδοντιατρική επίσκεψη. Από την πρώτη στιγμή που μπαίνετε στον χώρο μας, η εστίασή μας είναι στην άνεση, την αισθητική και τον σχεδιασμό ενός χαμόγελου που εκφράζει τον αληθινό σας εαυτό.
+> Στο i-Smile, πιστεύουμε ότι η αισθητική οδοντιατρική είναι κάτι παραπάνω από ένα άψογο αποτέλεσμα—είναι μια ολοκληρωμένη εμπειρία χαλάρωσης και πολυτέλειας. Κάθε λεπτομέρεια του χώρου μας έχει σχεδιαστεί για να σας προσφέρει άνεση, ηρεμία και την απόλυτη προσοχή που σας αξίζει.
 > 
-> Κλείστε το ραντεβού σας και ξεκινήστε την αλλαγή.
+> Κλείστε το ραντεβού σας και ελάτε να σχεδιάσουμε μαζί το χαμόγελο που σας εκφράζει. Link in bio.
+> 
+> **CTA Setup (Instagram):**
+> - Action: Ensure "Link in bio" is prominent.
+> - Link to Verify: `https://www.i-smile.gr/`
 > **Hashtags**: #iSmileAthens #AestheticExperience #SmileMakeover #LuxuryDentistry #AthensVibe #ΑισθητικήΟδοντιατρική 
 
 ---
