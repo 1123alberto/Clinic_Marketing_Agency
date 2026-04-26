@@ -26,5 +26,5 @@ The Graphic Designer must always scan `/03_Visual_Assets/Clinic_Photos/` before 
 - **Authenticity Check:** The Manager must reject any AI-enhanced image that makes the clinic look "unrecognizable" to a local patient.
 
 ## 🎨 Brand-Specific Filters:
-- **i-Smile:** Increase exposure (+10%), warm highlights, soft shadows (Luxury/Boutique feel).
+- **i-Smile:** Increase exposure (+10%), warm sunset-hue highlights, soft shadows (Relaxed/Minimalist feel).
 - **Dentplant:** High contrast, cool tones, sharp focus (Clinical/Precision feel).
