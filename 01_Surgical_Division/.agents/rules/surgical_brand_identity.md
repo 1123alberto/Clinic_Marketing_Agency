@@ -17,4 +17,6 @@ trigger: always_on
 ## 3. Platform-Specific Rules
 - **Instagram (Surgical):** Focus on educational "Behind the Scenes" of clinical prep, surgeon credentials, and high-level medical diagrams. 
 - **Google Business Profile:** Use keywords related to "Surgeon," "Clinic," and specific procedure names for local SEO.
-- **Handled Links:** Only link to the Surgical Instagram [@dentplant.gr] and the Surgical GBP website [www.dentplant.gr].
+- **Handled Links:** Only link to the official Dentplant Instagram [@dentplant.gr] and the following verified paths:
+    - Main Implants: `https://www.dentplant.gr/implants.html`
+    - Oral Surgery: `https://www.dentplant.gr/oral-surgery.html`

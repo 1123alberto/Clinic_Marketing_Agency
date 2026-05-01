@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentplant | Week 1 Master Content Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --surgical-blue: #0A2647;
+            --cosmetic-warm: #B4846C;
+            --tech-gray: #64748B;
+            --bg-base: #F0F2F5;
+            --card-glass: rgba(255, 255, 255, 0.85);
+            --border-glass: rgba(255, 255, 255, 0.4);
+            --shadow-premium: 0 20px 40px rgba(0,0,0,0.08);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            color: #2D3436;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* --- Sidebar Navigation --- */
+        nav {
+            width: 280px;
+            background: rgba(10, 38, 71, 0.95);
+            backdrop-filter: blur(20px);
+            height: 100vh;
+            position: fixed;
+            padding: 40px 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .logo-container h2 {
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-bottom: 15px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255,255,255,0.1);
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+        .nav-item.active {
+            border-left: 4px solid var(--cosmetic-warm);
+        }
+
+        /* --- Main Content --- */
+        main {
+            flex: 1;
+            margin-left: 280px;
+            padding: 60px 80px;
+        }
+
+        header {
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-info h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--surgical-blue);
+            margin-bottom: 10px;
+        }
+
+        .header-info p {
+            font-size: 1.1rem;
+            color: var(--tech-gray);
+            font-weight: 400;
+        }
+
+        .progress-card {
+            background: var(--card-glass);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-premium);
+            width: 300px;
+        }
+
+        .progress-bar-outer {
+            height: 8px;
+            background: #E9ECEF;
+            border-radius: 4px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-inner {
+            height: 100%;
+            background: linear-gradient(90deg, var(--surgical-blue), var(--cosmetic-warm));
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        /* --- Sections & Cards --- */
+        .day-section {
+            display: none;
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .day-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--card-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px 25px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom-left-radius: 20px;
+            color: white;
+        }
+
+        .tag-surgical { background: var(--surgical-blue); }
+        .tag-cosmetic { background: var(--cosmetic-warm); }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* --- Checklist & Copy Area --- */
+        .checklist {
+            margin-bottom: 30px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(0,0,0,0.03);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .checklist-item:hover {
+            background: rgba(0,0,0,0.05);
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #CBD5E0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .checklist-item.checked .checkbox {
+            background: #10B981;
+            border-color: #10B981;
+        }
+
+        .checkbox i {
+            color: white;
+            font-size: 12px;
+            display: none;
+        }
+
+        .checklist-item.checked .checkbox i {
+            display: block;
+        }
+
+        .checklist-item.checked span {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        .copy-container {
+            background: #F8FAFC;
+            border-radius: 20px;
+            border: 1px solid #E2E8F0;
+            padding: 25px;
+            position: relative;
+        }
+
+        .copy-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--tech-gray);
+        }
+
+        .btn-copy {
+            background: var(--surgical-blue);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-copy:hover {
+            background: #1E3A5F;
+            transform: scale(1.05);
+        }
+
+        .btn-copy.success {
+            background: #10B981;
+        }
+
+        pre {
+            font-family: 'Outfit', sans-serif;
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        .cta-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(180, 132, 108, 0.1);
+            border-radius: 15px;
+            font-size: 0.9rem;
+            border: 1px dashed var(--cosmetic-warm);
+        }
+
+        .cta-info strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--cosmetic-warm);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 1200px) {
+            main { padding: 40px; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <h2>Dentplant</h2>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item" onclick="showDay(1)"><i class="fa-solid fa-1"></i> Day 1: Foundation</li>
+            <li class="nav-item active" onclick="showDay(2)"><i class="fa-solid fa-2"></i> Day 2: Authority</li>
+            <li class="nav-item" onclick="showDay(3)"><i class="fa-solid fa-3"></i> Day 3: Trust</li>
+            <li class="nav-item" onclick="showDay(4)"><i class="fa-solid fa-4"></i> Day 4: Audit</li>
+            <li class="nav-item" onclick="showDay(5)"><i class="fa-solid fa-5"></i> Day 5: Education</li>
+            <li class="nav-item" onclick="showDay(6)"><i class="fa-solid fa-6"></i> Day 6: Local</li>
+            <li class="nav-item" onclick="showDay(7)"><i class="fa-solid fa-7"></i> Day 7: Review</li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <div class="header-info">
+                <h1>Week 1 Master Hub</h1>
+                <p>Strategic Content & Agency Roadmap</p>
+            </div>
+            <div class="progress-card">
+                <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.9rem;">
+                    <span>Overall Progress</span>
+                    <span id="progress-val">0%</span>
+                </div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" id="progress-fill"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- DAY 1 (Static Reference) -->
+        <div id="day1" class="day-section">
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-header"><i class="fa-solid fa-check-double" style="color: #10B981;"></i><h3>Day 1: Completed</h3></div>
+                <p>Foundation setup, legacy cleanup, and baseline surgical authority established.</p>
+            </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <div id="day2" class="day-section active">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-tag tag-surgical">Surgical</div>
+                    <div class="card-header"><i class="fa-solid fa-hospital" style="color: var(--surgical-blue);"></i><h3>Dentplant (GBP)</h3></div>
+                    <div class="checklist">
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Upload Photo: Surgical Planning / 3D Scans</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Verify CTA: Book / Κράτηση</span></div>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-header"><span>Greek Copy</span> <button class="btn-copy" onclick="copyContent(this)">Copy</button></div>
+                        <pre>Ολική Αποκατάσταση με Κλινική Ακρίβεια
+
+Η απώλεια δοντιών δεν χρειάζεται να είναι μόνιμη. Στη Dentplant, εφαρμόζουμε προηγμένα πρωτόκολλα εμφυτευματολογίας για την πλήρη αποκατάσταση του στόματος, εστιάζοντας στη μακροχρόνια σταθερότητα και τη βιολογική ενσωμάτωση. Με τη χρήση ψηφιακής καθοδήγησης, εξασφαλίζουμε απόλυτη χειρουργική ακρίβεια σε κάθε στάδιο της θεραπείας σας.
+
+Προγραμματίστε την κλινική σας αξιολόγηση σήμερα.
+
+#ΟλικήΑποκατάσταση #ΕμφυτεύματαΔοντιών #ΧειρουργικήΟδοντιατρική #Dentplant #Αθήνα</pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag tag-cosmetic">Cosmetic</div>
+                    <div class="card-header"><i class="fa-solid fa-sparkles" style="color: var(--cosmetic-warm);"></i><h3>Dentplant (Instagram)</h3></div>
+                    <div class="checklist">
+                        <div class="checklist-item checked"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Photo: Enhanced Office Boutique (GEN_ROOM_officedesk_V1)</span></div>
+                        <div class="checklist-item checked"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Publish Grid Post</span></div>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-header"><span>Greek Caption</span> <button class="btn-copy" onclick="copyContent(this)">Copy</button></div>
+                        <pre>Καλωσορίσατε στον χώρο όπου ξεκινά η μεταμόρφωση του χαμόγελου σας. ✨
+
+Στη Dentplant, πιστεύουμε ότι η αισθητική οδοντιατρική είναι κάτι παραπάνω από ένα άψογο αποτέλεσμα—είναι μια ολοκληρωμένη εμπειρία χαλάρωσης και πολυτέλειας. Κάθε λεπτομέρεια του χώρου μας έχει σχεδιαστεί για να σας προσφέρει άνεση, ηρεμία και την απόλυτη προσοχή που σας αξίζει.
+
+Κλείστε το ραντεβού σας και ελάτε να σχεδιάσουμε μαζί το χαμόγελο που σας εκφράζει. Link in bio.
+
+#DentplantAthens #AestheticExperience #SmileMakeover #LuxuryDentistry #AthensVibe #ΑισθητικήΟδοντιατρική</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 3 -->
+        <div id="day3" class="day-section">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-tag tag-surgical">Surgical</div>
+                    <div class="card-header"><i class="fa-solid fa-shield-halved" style="color: var(--surgical-blue);"></i><h3>Dentplant (GBP)</h3></div>
+                    <div class="checklist">
+                        <div class="checklist-item checked"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Photo: Patient Care (Handshake / Recovery)</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Activate "Learn More" Button</span></div>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-header"><span>Greek Copy</span> <button class="btn-copy" onclick="copyContent(this)">Copy</button></div>
+                        <pre>Άνεση και Ασφάλεια σε Κάθε Βήμα
+
+Στη Dentplant, κατανοούμε ότι η χειρουργική οδοντιατρική απαιτεί απόλυτη εμπιστοσύνη. Οι ασθενείς μας απολαμβάνουν μια ομαλή, ελεγχόμενη εμπειρία χάρη στα αυστηρά πρωτόκολλα διαχείρισης πόνου και τις ελάχιστα επεμβατικές τεχνικές μας. Προτεραιότητά μας είναι η μετεγχειρητική σας άνεση και η απόλυτη ασφάλεια.</pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag tag-cosmetic">Cosmetic</div>
+                    <div class="card-header"><i class="fa-solid fa-images" style="color: var(--cosmetic-warm);"></i><h3>Dentplant (Carousel)</h3></div>
+                    <div class="checklist">
+                        <div class="checklist-item checked"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Slide 1: Flawless Smile After Photo</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Slide 2: Aesthetic Detail / Veneers</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Publish Carousel</span></div>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-header"><span>Greek Caption</span> <button class="btn-copy" onclick="copyContent(this)">Copy</button></div>
+                        <pre>Η μεταμόρφωση ενός χαμόγελου είναι τέχνη. 🎨✨
+
+Κάθε χαμόγελο που σχεδιάζουμε στη Dentplant είναι μοναδικό. Είτε πρόκειται για όψεις πορσελάνης είτε για λεύκανση, το αποτέλεσμα είναι πάντα φυσικό και λαμπερό.
+
+Κάντε το πρώτο βήμα για την αλλαγή που ονειρεύεστε. Link in bio.</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 4 -->
+        <div id="day4" class="day-section">
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-header"><i class="fa-solid fa-gears" style="color: var(--tech-gray);"></i><h3>Infrastructure Audit</h3></div>
+                <div class="checklist">
+                    <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Verify Instagram Bio Link Destination</span></div>
+                    <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Test GBP "Book" Button functionality</span></div>
+                    <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Confirm booking.html form leads are tracking</span></div>
+                    <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Check for "Brand Bleed" (Surgical vs Cosmetic)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 5 -->
+        <div id="day5" class="day-section">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-tag tag-surgical">Surgical</div>
+                    <div class="card-header"><i class="fa-solid fa-graduation-cap" style="color: var(--surgical-blue);"></i><h3>Dentplant (GBP)</h3></div>
+                    <div class="checklist">
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Visual: 3D Dental Model / Scan</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Publish FAQ Post</span></div>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-header"><span>Greek Copy</span> <button class="btn-copy" onclick="copyContent(this)">Copy</button></div>
+                        <pre>Πώς πραγματοποιείται η τοποθέτηση ενός οδοντικού εμφυτεύματος;
+
+Η σωστή προετοιμασία είναι η βάση για ένα επιτυχημένο και ανώδυνο αποτέλεσμα. Η διαδικασία ξεκινά πάντα με έναν ενδελεχή 3D κλινικό έλεγχο, που μας επιτρέπει να σχεδιάσουμε κάθε βήμα με απόλυτη ακρίβεια. Χάρη στις σύγχρονες τεχνικές μας, η επέμβαση είναι ελάχιστα επεμβατική, ενώ η μετεγχειρητική πορεία παρακολουθείται στενά για να διασφαλίσουμε την τέλεια οστεοενσωμάτωση και τη μακροχρόνια υγεία του χαμόγελου σας.</pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag tag-cosmetic">Cosmetic</div>
+                    <div class="card-header"><i class="fa-solid fa-square-poll-vertical" style="color: var(--cosmetic-warm);"></i><h3>Dentplant (Story Poll)</h3></div>
+                    <div class="checklist">
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Graphic: Whitening vs Veneers Split</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Setup Interactive Poll Sticker</span></div>
+                    </div>
+                    <div class="cta-info">
+                        <strong>Interactive Settings:</strong>
+                        Poll Option 1: Λεύκανση (Λάμψη!)<br>
+                        Poll Option 2: Όψεις (Τελειότητα!)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 6 -->
+        <div id="day6" class="day-section">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-tag tag-surgical">Surgical</div>
+                    <div class="card-header"><i class="fa-solid fa-award" style="color: var(--surgical-blue);"></i><h3>Dentplant (GBP)</h3></div>
+                    <div class="checklist">
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Photo: Dr. Moshopoulos / Clinical Microscopy</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Publish Credentials Post</span></div>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-header"><span>Greek Copy</span> <button class="btn-copy" onclick="copyContent(this)">Copy</button></div>
+                        <pre>Αφοσίωση στην Κλινική Εξέλιξη και την Αριστεία
+
+Η οδοντιατρική επιστήμη εξελίσσεται διαρκώς και εμείς φροντίζουμε να βρισκόμαστε πάντα στην πρώτη γραμμή. Επενδύουμε σταθερά στη συνεχιζόμενη εκπαίδευση και την υιοθέτηση των πλέον σύγχρονων διεθνών ιατρικών πρωτοκόλλων, προσφέροντας στους ασθενείς μας στην Αθήνα την πιο προηγμένη και ασφαλή οδοντιατρική φροντίδα.</pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag tag-cosmetic">Cosmetic</div>
+                    <div class="card-header"><i class="fa-solid fa-clapperboard" style="color: var(--cosmetic-warm);"></i><h3>Dentplant (Reel)</h3></div>
+                    <div class="checklist">
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Clip 1: Clinic Lounge Amenities</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Clip 2: Consultation Shade Guide</span></div>
+                        <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Clip 3: Final Patient Smile Mirror</span></div>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-header"><span>Greek Caption</span> <button class="btn-copy" onclick="copyContent(this)">Copy</button></div>
+                        <pre>Μια ματιά πίσω από την απόλυτη εμπειρία Dentplant. 💫 
+
+Η υψηλή αισθητική δεν αφορά μόνο το τελικό χαμόγελο, αλλά και τη φροντίδα, τον χώρο και την προσοχή στη λεπτομέρεια κατά τη διάρκεια της επίσκεψής σας. 
+
+Κλείστε το ραντεβού σας και ζήστε τη διαφορά. Link in bio.</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 7 -->
+        <div id="day7" class="day-section">
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-header"><i class="fa-solid fa-chart-line" style="color: var(--tech-gray);"></i><h3>Performance Review</h3></div>
+                <div class="checklist">
+                    <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Review GBP Click-Through Rate (CTR)</span></div>
+                    <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Analyze Instagram Story Engagement</span></div>
+                    <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Tally total leads from booking.html</span></div>
+                    <div class="checklist-item" onclick="toggleItem(this)"><div class="checkbox"><i class="fa-solid fa-check"></i></div><span>Select top-performing post for Week 2 Scaling</span></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function showDay(num) {
+            document.querySelectorAll('.day-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+            document.getElementById('day' + num).classList.add('active');
+            document.querySelectorAll('.nav-item')[num-1].classList.add('active');
+        }
+
+        function toggleItem(el) {
+            el.classList.toggle('checked');
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const total = document.querySelectorAll('.checklist-item').length;
+            const checked = document.querySelectorAll('.checklist-item.checked').length;
+            const percent = Math.round((checked / total) * 100);
+            document.getElementById('progress-fill').style.width = percent + '%';
+            document.getElementById('progress-val').innerText = percent + '%';
+        }
+
+        function copyContent(btn) {
+            const text = btn.parentElement.nextElementSibling.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                btn.classList.add('success');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('success');
+                }, 2000);
+            });
+        }
+
+        // Initial Progress
+        updateProgress();
+    </script>
+</body>
+</html>

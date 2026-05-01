@@ -17,4 +17,4 @@ trigger: always_on
 
 ## 3. Cross-Channel Coordination
 - **GBP vs. Instagram:** Ensure Google Business Profile updates focus on "Local Authority & Trust," while Instagram focuses on "Visual Engagement & Education."
-- **Link Integrity:** Double-check that the Surgical site never links to the Cosmetic social accounts and vice-versa.
+- **Unified Branding:** All content across all channels must point to the `dentplant.gr` domain and reference the unified **Dentplant** brand.

@@ -72,22 +72,22 @@ const TOOLS = [
 
 const CLINICS = [
   {
-    id: "ismile",
-    name: "i-smile.gr",
-    label: "i-smile",
-    focus: "cosmetic dentistry: LED teeth whitening, porcelain veneers, and clear aligners",
-    accent: "#E879F9",
-    accentDim: "rgba(232,121,249,0.15)",
-    tag: "Cosmetic",
-  },
-  {
-    id: "dentplant",
+    id: "dentplant_surgical",
     name: "dentplant.gr",
     label: "dentplant",
     focus: "dental implants and full-arch restorations",
     accent: "#38BDF8",
     accentDim: "rgba(56,189,248,0.15)",
-    tag: "Implants",
+    tag: "Surgical",
+  },
+  {
+    id: "dentplant_cosmetic",
+    name: "dentplant.gr",
+    label: "dentplant",
+    focus: "cosmetic dentistry: LED teeth whitening, porcelain veneers, and clear aligners",
+    accent: "#E879F9",
+    accentDim: "rgba(232,121,249,0.15)",
+    tag: "Cosmetic",
   },
 ];
 
@@ -103,7 +103,7 @@ const BASE = {
 };
 
 export default function App() {
-  const [selectedClinic, setSelectedClinic] = useState("ismile");
+  const [selectedClinic, setSelectedClinic] = useState("dentplant_surgical");
   const [inputs, setInputs] = useState({});
   const [results, setResults] = useState({});
   const [loading, setLoading] = useState({});
@@ -274,7 +274,7 @@ Here is a creative concept for ${clinic.name}:
           Turn Ideas into Followers
         </h1>
         <p style={{ margin: 0, color: BASE.muted, fontSize: 14 }}>
-          7 AI-powered content tools — built for Dr. Moshopoulos's clinics.
+          7 AI-powered content tools — built for the unified Dentplant brand.
         </p>
       </div>
 

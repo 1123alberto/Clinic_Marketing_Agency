@@ -4,7 +4,7 @@ This is the detailed strategic approach for Day 2. It utilizes placeholder tags 
 
 ## 🎯 Strategic Objectives
 - **Dentplant (Surgical)**: Establish deep clinical authority in complex, high-value restorations (e.g., full-arch/All-on-4) via Google Business Profile, directing high-intent leads to your newly updated booking page.
-- **i-Smile (Cosmetic)**: Drive high-aesthetic Instagram engagement with a 15-second Reel Script showcasing the premium, anxiety-free "Smile Journey."
+- **Cosmetic**: Drive high-aesthetic Instagram engagement with a 15-second Reel Script showcasing the premium, anxiety-free "Smile Journey."
 
 ---
 
@@ -30,7 +30,7 @@ This is the detailed strategic approach for Day 2. It utilizes placeholder tags 
 
 ---
 
-## ✨ 02_Cosmetic Division: i-Smile (Instagram Reel Script)
+## ✨ 02_Cosmetic Division: Dentplant (Instagram Reel Script)
 
 ### [NEW] Content Draft: The "Aesthetic Consultation" Reel
 - **Format**: Instagram Reel (15-30 seconds)
@@ -48,16 +48,16 @@ This is the detailed strategic approach for Day 2. It utilizes placeholder tags 
 **Caption Draft:**
 > Η διαδρομή προς το ιδανικό σας χαμόγελο πρέπει να είναι το ίδιο υπέροχη με το αποτέλεσμα. 💫 
 > 
-> Στο i-Smile, επαναπροσδιορίζουμε την οδοντιατρική επίσκεψη. Από την πρώτη στιγμή που μπαίνετε στον χώρο μας, η εστίασή μας είναι στην άνεση, την αισθητική και τον σχεδιασμό ενός χαμόγελου που εκφράζει τον αληθινό σας εαυτό.
+> Στη Dentplant, επαναπροσδιορίζουμε την οδοντιατρική επίσκεψη. Από την πρώτη στιγμή που μπαίνετε στον χώρο μας, η εστίασή μας είναι στην άνεση, την αισθητική και τον σχεδιασμό ενός χαμόγελου που εκφράζει τον αληθινό σας εαυτό.
 > 
 > Κλείστε το ραντεβού σας και ξεκινήστε την αλλαγή.
 >
 > **Hashtag Strategy (Discovery)**:
-> #iSmileAthens #AestheticExperience #SmileMakeover #LuxuryDentistry #AthensVibe #ΑισθητικήΟδοντιατρική 
+> #DentplantAthens #AestheticExperience #SmileMakeover #LuxuryDentistry #AthensVibe #ΑισθητικήΟδοντιατρική 
 
 ---
 
 ## ⚖️ Compliance & Governance Check
-- **Voice Firewall**: Verified. Dentplant uses strict clinical terminology ("βιολογική ενσωμάτωση"). i-Smile uses lifestyle language ("εμπειρία", "άνεση").
+- **Voice Firewall**: Verified. Surgical uses strict clinical terminology ("βιολογική ενσωμάτωση"). Cosmetic uses lifestyle language ("εμπειρία", "άνεση").
 - **EOO Guidelines**: Compliant. No guarantees, no superlatives, no prices.
 - **Lead Capture Alignment**: The Dentplant CTA correctly routes to your newly updated `booking.html` infrastructure.

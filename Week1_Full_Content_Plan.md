@@ -27,7 +27,7 @@ This document contains the fully detailed content drafts and media requirements 
 > **Σύνδεσμος**: `https://www.dentplant.gr/booking.html`
 > **Hashtags**: #ΟλικήΑποκατάσταση #ΕμφυτεύματαΔοντιών #ΧειρουργικήΟδοντιατρική #Dentplant #Αθήνα
 
-### ✨ 02_Cosmetic Division: i-Smile (Instagram Grid Post)
+### ✨ 02_Cosmetic Division: Dentplant (Instagram Grid Post)
 **Strategic Voice:** Aesthetic Luxury
 **Media Required:**
 - `[COMPLETED]`: Enhanced Office Boutique Photo (GEN_ROOM_officedesk_V1).
@@ -35,14 +35,14 @@ This document contains the fully detailed content drafts and media requirements 
 **Caption (Greek):**
 > **Καλωσορίσατε στον χώρο όπου ξεκινά η μεταμόρφωση του χαμόγελου σας. ✨**
 > 
-> Στο i-Smile, πιστεύουμε ότι η αισθητική οδοντιατρική είναι κάτι παραπάνω από ένα άψογο αποτέλεσμα—είναι μια ολοκληρωμένη εμπειρία χαλάρωσης και πολυτέλειας. Κάθε λεπτομέρεια του χώρου μας έχει σχεδιαστεί για να σας προσφέρει άνεση, ηρεμία και την απόλυτη προσοχή που σας αξίζει.
+> Στη Dentplant, πιστεύουμε ότι η αισθητική οδοντιατρική είναι κάτι παραπάνω από ένα άψογο αποτέλεσμα—είναι μια ολοκληρωμένη εμπειρία χαλάρωσης και πολυτέλειας. Κάθε λεπτομέρεια του χώρου μας έχει σχεδιαστεί για να σας προσφέρει άνεση, ηρεμία και την απόλυτη προσοχή που σας αξίζει.
 > 
 > Κλείστε το ραντεβού σας και ελάτε να σχεδιάσουμε μαζί το χαμόγελο που σας εκφράζει. Link in bio.
 > 
 > **CTA Setup (Instagram):**
 > - Action: Ensure "Link in bio" is prominent.
-> - Link to Verify: `https://www.i-smile.gr/`
-> **Hashtags**: #iSmileAthens #AestheticExperience #SmileMakeover #LuxuryDentistry #AthensVibe #ΑισθητικήΟδοντιατρική 
+> - Link to Verify: `https://www.dentplant.gr/aesthetics.html`
+> **Hashtags**: #DentplantAthens #AestheticExperience #SmileMakeover #LuxuryDentistry #AthensVibe #ΑισθητικήΟδοντιατρική 
 
 ---
 
@@ -60,7 +60,7 @@ This document contains the fully detailed content drafts and media requirements 
 > **Κουμπί (CTA)**: Μάθετε περισσότερα
 > **Σύνδεσμος**: `https://www.dentplant.gr/`
 
-### ✨ 02_Cosmetic Division: i-Smile (Instagram Carousel)
+### ✨ 02_Cosmetic Division: Dentplant (Instagram Carousel)
 **Strategic Voice:** Aesthetic Luxury
 **Media Required:**
 - `[PENDING_USER_PHOTO_DAY3_ISM_1]`: Stunning close-up of a flawless smile (After photo).
@@ -68,11 +68,11 @@ This document contains the fully detailed content drafts and media requirements 
 
 **Caption (Greek):**
 > Η μεταμόρφωση ενός χαμόγελου είναι τέχνη. 🎨✨
-> Κάθε χαμόγελο που σχεδιάζουμε στο i-Smile είναι μοναδικό. Είτε πρόκειται για όψεις πορσελάνης είτε για λεύκανση, το αποτέλεσμα είναι πάντα φυσικό και λαμπερό.
+> Κάθε χαμόγελο που σχεδιάζουμε στη Dentplant είναι μοναδικό. Είτε πρόκειται για όψεις πορσελάνης είτε για λεύκανση, το αποτέλεσμα είναι πάντα φυσικό και λαμπερό.
 > 
 > **CTA Setup (Instagram):**
 > - Action: Ensure "Link in bio" is prominent.
-> - Link to Verify: `https://www.i-smile.gr/`
+> - Link to Verify: `https://www.dentplant.gr/aesthetics.html`
 
 ---
 
@@ -94,13 +94,13 @@ This document contains the fully detailed content drafts and media requirements 
 - `[PENDING_USER_PHOTO_DAY5_DENT]`: Educational visual (3D dental model or scan).
 
 **Copy (Greek):**
-> **Τι να περιμένετε κατά τη διαδικασία τοποθέτησης εμφυτεύματος;**
-> Η ενημέρωση είναι δύναμη. Η διαδικασία ξεκινά με 3D κλινικό έλεγχο. Η τοποθέτηση είναι ελάχιστα επεμβατική και η επούλωση παρακολουθείται στενά για τέλεια οστεοενσωμάτωση.
+> **Πώς πραγματοποιείται η τοποθέτηση ενός οδοντικού εμφυτεύματος;**
+> Η σωστή προετοιμασία είναι η βάση για ένα επιτυχημένο και ανώδυνο αποτέλεσμα. Η διαδικασία ξεκινά πάντα με έναν ενδελεχή 3D κλινικό έλεγχο, που μας επιτρέπει να σχεδιάσουμε κάθε βήμα με απόλυτη ακρίβεια. Χάρη στις σύγχρονες τεχνικές μας, η επέμβαση είναι ελάχιστα επεμβατική, ενώ η μετεγχειρητική πορεία παρακολουθείται στενά για να διασφαλίσουμε την τέλεια οστεοενσωμάτωση και τη μακροχρόνια υγεία του χαμόγελου σας.
 > 
 > **Κουμπί (CTA)**: Κράτηση / Book
 > **Σύνδεσμος**: `https://www.dentplant.gr/booking.html`
 
-### ✨ 02_Cosmetic Division: i-Smile (Instagram Story Poll)
+### ✨ 02_Cosmetic Division: Dentplant (Instagram Story Poll)
 **Strategic Voice:** Aesthetic Luxury (Interactive)
 **Media Required:**
 - `[PENDING_USER_PHOTO_DAY5_ISM]`: Split screen graphic (Whitening vs Veneers).
@@ -119,13 +119,13 @@ This document contains the fully detailed content drafts and media requirements 
 - `[PENDING_USER_PHOTO_DAY6_DENT]`: Dr. Moshopoulos in action (Seminar or clinical microscopy).
 
 **Copy (Greek):**
-> **Δέσμευση στη Συνεχιζόμενη Κλινική Αριστεία**
-> Επενδύουμε διαρκώς στη συνεχιζόμενη εκπαίδευση και τα κορυφαία παγκόσμια ιατρικά πρωτόκολλα για την πιο προηγμένη φροντίδα στην Αθήνα.
+> **Αφοσίωση στην Κλινική Εξέλιξη και την Αριστεία**
+> Η οδοντιατρική επιστήμη εξελίσσεται διαρκώς και εμείς φροντίζουμε να βρισκόμαστε πάντα στην πρώτη γραμμή. Επενδύουμε σταθερά στη συνεχιζόμενη εκπαίδευση και την υιοθέτηση των πλέον σύγχρονων διεθνών ιατρικών πρωτοκόλλων, προσφέροντας στους ασθενείς μας στην Αθήνα την πιο προηγμένη και ασφαλή οδοντιατρική φροντίδα.
 > 
 > **Κουμπί (CTA)**: Μάθετε περισσότερα / Learn More
 > **Σύνδεσμος**: `https://www.dentplant.gr/`
 
-### ✨ 02_Cosmetic Division: i-Smile (Instagram Reel)
+### ✨ 02_Cosmetic Division: Dentplant (Instagram Reel)
 **Strategic Voice:** Aesthetic Luxury
 **Media Required:**
 - `[PENDING_USER_CLIP_DAY6_1]`: Detail of clinic lounge amenities.
@@ -138,13 +138,13 @@ This document contains the fully detailed content drafts and media requirements 
 - Clip 3: Το αποτέλεσμα που αξίζετε ✨
 
 **Caption (Greek):**
-> Μια ματιά πίσω από την απόλυτη εμπειρία i-Smile. 💫 
+> Μια ματιά πίσω από την απόλυτη εμπειρία Dentplant. 💫 
 > Η υψηλή αισθητική δεν αφορά μόνο το τελικό χαμόγελο, αλλά και τη φροντίδα, τον χώρο και την προσοχή στη λεπτομέρεια κατά τη διάρκεια της επίσκεψής σας. 
 > Κλείστε το ραντεβού σας και ζήστε τη διαφορά.
 > 
 > **CTA Setup (Instagram):**
 > - Action: Add "Link in bio" text to caption.
-> - Link to Verify: `https://www.i-smile.gr/`
+> - Link to Verify: `https://www.dentplant.gr/aesthetics.html`
 
 ---
 

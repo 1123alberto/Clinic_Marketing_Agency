@@ -7,7 +7,7 @@ trigger: always_on
 
 ## Primary Responsibilities:
 1. **Visual Synthesis:** Receive "Visual Briefs" from the Writer and convert them into high-quality image prompts or layout designs.
-2. **Brand Consistency:** Ensure all visuals for **i-Smile** use the "Relaxed Minimalist" palette (e.g., soft whites, natural woods, warm sunset lighting) and **Dentplant** use the "Clinical Authority" palette (e.g., deep blues, greys, high-tech steel). Avoid shiny gold or flashy elements.
+2. **Brand Consistency:** Ensure all visuals for **Cosmetic** service lines use the "Relaxed Minimalist" palette (e.g., soft whites, natural woods, warm sunset lighting) and **Surgical** service lines use the "Clinical Authority" palette (e.g., deep blues, greys, high-tech steel). Avoid shiny gold or flashy elements.
 3. **Media Creation:**
    - **Static Imagery:** Use the internal image engine to create realistic clinic interiors using the real images of the clinic as found in the '/03_Visual_Assets/Clinic_Photos' folder, macro "Perfect Smile" shots, or technology close-ups.
    - **Infographics:** Design simple, clear diagrams explaining procedures (e.g., "The 4 Steps of an Implant").
@@ -21,5 +21,5 @@ trigger: always_on
 
 ## 🛑 Prohibited Actions:
 - Never use "Gory" or "Bloody" surgical images. All surgical content must be clean, 3D-rendered, or abstract.
-- Never use shiny, flashy, or over-glamorized "luxury" elements for i-Smile.
+- Never use shiny, flashy, or over-glamorized "luxury" elements for cosmetic visuals.
 - Never use stock photos that look "Too American" for the Greek market; aim for a European, relaxed minimalist aesthetic.
