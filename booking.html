@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κράτηση Ραντεβού | Dentplant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --surgical-blue: #0A2647;
+            --cosmetic-warm: #B4846C;
+            --bg-base: #FDFCFB;
+            --text-main: #2D3436;
+            --glass: rgba(255, 255, 255, 0.9);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: var(--surgical-blue);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: #64748B;
+            font-weight: 400;
+        }
+
+        /* --- Progress Bar --- */
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #E2E8F0;
+            z-index: 1;
+        }
+
+        .step-dot {
+            width: 32px;
+            height: 32px;
+            background: white;
+            border: 2px solid #E2E8F0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .step-dot.active {
+            border-color: var(--surgical-blue);
+            color: var(--surgical-blue);
+            background: #F0F9FF;
+            transform: scale(1.1);
+        }
+
+        .step-dot.completed {
+            background: var(--surgical-blue);
+            border-color: var(--surgical-blue);
+            color: white;
+        }
+
+        /* --- Form Sections --- */
+        .form-step {
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .option-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .option-card {
+            background: white;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .option-card:hover {
+            border-color: var(--surgical-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .option-card.selected {
+            border-color: var(--surgical-blue);
+            background: #F0F9FF;
+        }
+
+        .option-icon {
+            width: 40px;
+            height: 40px;
+            background: #F8FAFC;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--surgical-blue);
+        }
+
+        .option-details b {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+
+        .option-details span {
+            font-size: 0.8rem;
+            color: #64748B;
+        }
+
+        /* --- Input Styles --- */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #475569;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            outline: none;
+        }
+
+        input:focus {
+            border-color: var(--surgical-blue);
+            background: #F8FAFC;
+        }
+
+        /* --- Buttons --- */
+        .btn-group {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 16px;
+            border-radius: 14px;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--surgical-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1E3A5F;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(10, 38, 71, 0.2);
+        }
+
+        .btn-secondary {
+            background: #F1F5F9;
+            color: #475569;
+        }
+
+        /* --- Success Screen --- */
+        #success-step {
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #DCFCE7;
+            color: #16A34A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 25px;
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 30px 15px; }
+            h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">Dentplant</div>
+            <div class="subtitle">Premium Dental Implants & Aesthetics</div>
+        </header>
+
+        <div class="progress-bar">
+            <div class="step-dot active" id="dot-1">1</div>
+            <div class="step-dot" id="dot-2">2</div>
+            <div class="step-dot" id="dot-3">3</div>
+        </div>
+
+        <form id="booking-form">
+            <!-- Step 1: Treatment -->
+            <div class="form-step active" id="step-1">
+                <h2>Επιλέξτε Υπηρεσία</h2>
+                <div class="option-grid">
+                    <div class="option-card" onclick="selectOption(this, 'treatment', 'Dental Implants')">
+                        <div class="option-icon"><i class="fa-solid fa-tooth"></i></div>
+                        <div class="option-details">
+                            <b>Οδοντικά Εμφυτεύματα</b>
+                            <span>Εξειδικευμένη εμφυτευματολογία & All-on-4</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectOption(this, 'treatment', 'Cosmetic Dentistry')">
+                        <div class="option-icon"><i class="fa-solid fa-sparkles"></i></div>
+                        <div class="option-details">
+                            <b>Αισθητική Οδοντιατρική</b>
+                            <span>Όψεις πορσελάνης & Λεύκανση LED</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectOption(this, 'treatment', 'Clear Aligners')">
+                        <div class="option-icon"><i class="fa-solid fa-align-center"></i></div>
+                        <div class="option-details">
+                            <b>Διαφανείς Νάρθηκες</b>
+                            <span>Ορθοδοντική χωρίς σιδεράκια</span>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="treatment" id="selected-treatment">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary" onclick="nextStep(2)" id="next-1" disabled>Συνέχεια <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 2: Date & Time -->
+            <div class="form-step" id="step-2">
+                <h2>Προτίμηση Ραντεβού</h2>
+                <div class="input-group">
+                    <label>Επιθυμητή Ημερομηνία</label>
+                    <input type="date" name="date" required min="2026-05-04">
+                </div>
+                <div class="input-group">
+                    <label>Προτιμώμενη Ώρα</label>
+                    <select name="time" required>
+                        <option value="" disabled selected>Επιλέξτε ζώνη ώρας</option>
+                        <option value="morning">Πρωί (09:00 - 13:00)</option>
+                        <option value="afternoon">Απόγευμα (14:00 - 20:00)</option>
+                    </select>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary" onclick="nextStep(1)"><i class="fa-solid fa-arrow-left"></i> Πίσω</button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep(3)">Συνέχεια <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 3: Contact -->
+            <div class="form-step" id="step-3">
+                <h2>Στοιχεία Επικοινωνίας</h2>
+                <div class="input-group">
+                    <label>Ονοματεπώνυμο</label>
+                    <input type="text" name="name" placeholder="Π.χ. Ιωάννης Παπαδόπουλος" required>
+                </div>
+                <div class="input-group">
+                    <label>Κινητό Τηλέφωνο</label>
+                    <input type="tel" name="phone" placeholder="69XXXXXXXX" required>
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary" onclick="nextStep(2)"><i class="fa-solid fa-arrow-left"></i> Πίσω</button>
+                    <button type="submit" class="btn btn-primary">Ολοκλήρωση Κράτησης <i class="fa-solid fa-check"></i></button>
+                </div>
+            </div>
+
+            <!-- Success -->
+            <div class="form-step" id="success-step">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Η κράτησή σας εστάλη!</h2>
+                <p>Σας ευχαριστούμε για την εμπιστοσύνη. Ένας εκπρόσωπος της Dentplant θα επικοινωνήσει μαζί σας σύντομα για την οριστικοποίηση του ραντεβού.</p>
+                <div class="btn-group">
+                    <a href="https://www.dentplant.gr" class="btn btn-primary">Επιστροφή στην Αρχική</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let currentStep = 1;
+
+        function nextStep(step) {
+            document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+            document.getElementById('step-' + step).classList.add('active');
+            
+            // Update progress bar
+            document.querySelectorAll('.step-dot').forEach((dot, idx) => {
+                if (idx + 1 < step) dot.className = 'step-dot completed';
+                else if (idx + 1 === step) dot.className = 'step-dot active';
+                else dot.className = 'step-dot';
+            });
+            
+            currentStep = step;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function selectOption(card, inputId, value) {
+            document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            document.getElementById('selected-treatment').value = value;
+            document.getElementById('next-1').disabled = false;
+        }
+
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real scenario, this would send data to a CRM/Backend
+            document.getElementById('booking-form').style.display = 'none';
+            document.querySelector('.progress-bar').style.display = 'none';
+            document.getElementById('success-step').classList.add('active');
+        });
+    </script>
+</body>
+</html>
