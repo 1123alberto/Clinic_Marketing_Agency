@@ -1,10 +1,10 @@
-# Clinic Marketing Agency - Multi-Agent Management System
+# Clinic Marketing Agency - Unified Dentplant Brand Management
 
-Welcome to the **Clinic Marketing Agency** repository. This project is structured to manage marketing content and strategy for two distinct medical divisions using a Multi-Agent AI system.
+This repository is structured to manage the unified marketing ecosystem for **Dentplant.gr**. The system governs two specialized service lines—Surgical and Cosmetic—under a single master brand identity.
 
-## 🏥 Agency Structure
+## 🏥 Brand Structure
 
-The agency is divided into two specialized branches:
+The agency manages the **Dentplant** ecosystem through specialized divisions:
 
 - **00_Compliance**: Houses all regulatory and ethical standards (e.g., Greek Dental Association guidelines) that all content must adhere to.
 - **01_Surgical_Division**: Focuses on clinical authority, surgical procedures, and high-trust medical content.

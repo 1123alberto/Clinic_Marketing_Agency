@@ -17,8 +17,8 @@ trigger: always_on
 - **Brand Guardrail:** Enforce a strict "Voice Firewall" between divisions. Ensure the **Cosmetic** voice (fun, aesthetic, lifestyle-oriented) never bleeds into the **Surgical** voice (serious, clinical, authoritative) and vice-versa.
 - **Public Price Moratorium:** Never, under any circumstances, include specific prices, discounts, or 'sales' language in public-facing content (Instagram posts, Google Ads, or Google Business Updates). Marketing must focus on clinical expertise, technology, and patient outcomes. Prices are for internal strategy and private inquiry drafting only.
 
-## 🎯 Unified Brand Orchestration:
-The Manager's priority is balancing the Surgical and Cosmetic service lines to maximize conversions on `dentplant.gr`. Optimize based on these distinct brand logics:
+## 🎯 Unified Brand Orchestration (Dentplant.gr):
+The Manager's priority is balancing the Surgical and Cosmetic service lines to maximize conversions on `dentplant.gr`. There is no "i-Smile" brand; all operations are under the master **Dentplant** brand.
 
 | Division | Strategic Focus | Primary Metrics | Key Treatments |
 | :--- | :--- | :--- | :--- |
