@@ -269,6 +269,23 @@
             h2 { font-size: 1.2rem; }
         }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1667842624268921');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1667842624268921&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -398,6 +415,16 @@
 
         document.getElementById('booking-form').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Meta Pixel Tracking: Record a successful booking
+            if(typeof fbq !== 'undefined') {
+                fbq('track', 'Schedule', {
+                    content_name: document.getElementById('selected-treatment').value,
+                    currency: 'EUR',
+                    value: 0.00 // Internal strategy: Value assigned by management later
+                });
+            }
+
             // In a real scenario, this would send data to a CRM/Backend
             document.getElementById('booking-form').style.display = 'none';
             document.querySelector('.progress-bar').style.display = 'none';
