@@ -1,14 +1,14 @@
 # 📈 Week 2 Master Plan: The "Micro-Budget" Growth Sprint
 
-This plan outlines the acquisition strategy for **Dentplant.gr** during Week 2, with a total testing budget of **€30**.
+This plan outlines the acquisition strategy for **Dentplant.gr** during Week 2, with a focused testing budget of **€20**.
 
 ---
 
-## 💰 Budget Allocation (Total: €30)
-Given the specific micro-budget split requested, we will focus on **Hyper-Local Discovery**:
+## 💰 Budget Allocation (Total: €20)
+Given the micro-budget, we are focusing on **Hyper-Local Discovery**:
 
-*   **€20 (Google Maps / GBP Ads)**: Focused on **Dentplant Surgical**. We will run a "Local Discovery" campaign to ensure your clinic appears at the top of Google Maps for surgical queries in Paleo Faliro.
-*   **€10 (Instagram Boost)**: Focused on **Dentplant Cosmetic**. A 3-day targeted boost of our best aesthetic visual to drive profile visits and DMs.
+*   **€14 (Google Maps / GBP Ads)**: Focused on **Dentplant Surgical**. ~€2.00/day to appear at the top of local "Dental Implant" searches.
+*   **€6 (Instagram Boost)**: Focused on **Dentplant Cosmetic**. A high-impact 48-hour boost to drive local discovery.
 
 ---
 
