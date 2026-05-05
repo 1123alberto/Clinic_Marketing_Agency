@@ -16,12 +16,13 @@ Given the micro-budget, we are focusing on **Hyper-Local Discovery**:
 
 ### 🚀 Phase 1: Launch & Boost (Day 8 - Day 10)
 **Day 8: The Selection**
-- [ ] Manager: Audit Week 1 metrics to select the single highest-performing organic post.
-- [ ] Graphic Designer: Finalize the "Ad-Ready" watermarked visual for the selected post.
+- [x] Manager: Audit Week 1 metrics to select the single highest-performing organic post.
+- [x] Graphic Designer: Finalize the "Ad-Ready" watermarked visual for the selected post.
 
 **Day 9: Deployment**
-- [ ] Deploy €5 "Learning" boost (48 hours) to a 3km radius around the clinic.
-- [ ] **Surgical**: GBP Update - "Advanced 3D Planning at Dentplant" (Organic Search capture).
+- [x] Deploy Google Ads (Surgical Sniper) - €2.00/day.
+- [x] Deploy Instagram Boost (Clear Aligner Discovery) - €6.00 Total.
+- [x] **Surgical**: GBP Update - "Advanced 3D Planning at Dentplant" (Organic Search capture).
 
 ### 🛠️ Phase 2: Analysis & Re-Allocation (Day 11 - Day 12)
 **Day 11: The Audit**
