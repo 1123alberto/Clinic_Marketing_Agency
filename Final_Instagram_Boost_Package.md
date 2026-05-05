@@ -41,6 +41,13 @@ Use this package to launch the campaign from your mobile app or desktop at home.
 
 ---
 
+## 🔍 Tracking & Pixel
+*   **Meta Pixel ID**: `1667842624268921`
+*   **Status**: Verified manually on dentplant.gr.
+*   **Action**: Ensure the "Meta Pixel Code" is active in the website header to track "Learn More" conversions.
+
+---
+
 ## ✅ Launch Instructions
 1.  Open the **Instagram App** or **Meta Business Suite**.
 2.  Post the image with the caption above.
