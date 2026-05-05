@@ -15,24 +15,33 @@ Given the micro-budget, we are focusing on **Hyper-Local Discovery**:
 ## 📅 Week 2 Tactical Roadmap
 
 ### 🚀 Phase 1: Launch & Boost (Day 8 - Day 10)
-**Day 8: The Selection**
+**Day 8 [2026-05-04]: The Selection**
 - [x] Manager: Audit Week 1 metrics to select the single highest-performing organic post.
 - [x] Graphic Designer: Finalize the "Ad-Ready" watermarked visual for the selected post.
 
-**Day 9: Deployment**
+**Day 9 [2026-05-05]: Deployment**
 - [x] Deploy Google Ads (Surgical Sniper) - €2.00/day.
 - [x] Deploy Instagram Boost (Clear Aligner Discovery) - €6.00 Total.
 - [x] **Surgical**: GBP Update - "Advanced 3D Planning at Dentplant" (Organic Search capture).
 
+**Day 10 [2026-05-06]: Data Monitoring**
+- [x] Monitor initial reach and engagement metrics.
+
 ### 🛠️ Phase 2: Analysis & Re-Allocation (Day 11 - Day 12)
-**Day 11: The Audit**
+**Day 11 [2026-05-07]: The Audit**
 - [ ] Analyze Cost-Per-Click (CPC) and profile visits from the initial €5 spend.
 - [ ] If CPC < €0.30, allocate remaining €15 to the same creative. If higher, pivot to the alternative "Cosmetic Glow" asset.
 
+**Day 12 [2026-05-08]: Strategy Pivot**
+- [ ] Implement creative adjustments based on audit findings.
+
 ### 🏁 Phase 3: Conversion Lock (Day 13 - Day 14)
-**Day 13: Direct Response**
+**Day 13 [2026-05-09]: Direct Response**
 - [ ] **Cosmetic**: Instagram Story with "Direct Link" to the `booking.html` system.
 - [ ] **Surgical**: "Case Study" GBP update (Anonymous success story) to close the week with social proof.
+
+**Day 14 [2026-05-10]: Final Conversion Lock**
+- [ ] Final check on booking system conversions and week-end reporting.
 
 ---
 
