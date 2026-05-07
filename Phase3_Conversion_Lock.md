@@ -33,27 +33,27 @@ This package contains the high-intent direct response content for the final phas
 
 ### 📝 Copy Draft (Bilingual)
 #### 🇬🇷 Ελληνικά (Greek)
-**Τίτλος:** Αποκατάσταση All-on-4: Ένα περιστατικό κλινικής ακρίβειας στην Αθήνα. 🏥
+**Τίτλος:** Πλήρης Αποκατάσταση Στόματος με Εμφυτεύματα: Μια ολιστική προσέγγιση στην Dentplant. 🏥
 
-**Περιγραφή:** Στην Dentplant, η αποκατάσταση της ποιότητας ζωής των ασθενών μας είναι η προτεραιότητά μας. Πρόσφατα ολοκληρώσαμε μια πλήρη αποκατάσταση τόξου All-on-4 για έναν ασθενή μας, συνδυάζοντας την τρισδιάστατη σάρωμα (3D scanning) με την εξειδικευμένη χειρουργική εμπειρία.
+**Περιγραφή:** Η πλήρης αποκατάσταση του στόματος απαιτεί τον απόλυτο συνδυασμό χειρουργικής ακρίβειας και επιστημονικής εξειδίκευσης. Πρόσφατα ολοκληρώσαμε ένα σύνθετο περιστατικό ολικής αποκατάστασης με εμφυτεύματα, προσφέροντας στον ασθενή μας μια μόνιμη λύση που αποκαθιστά πλήρως τη μασητική λειτουργία και την αισθητική του προσώπου.
 
 Το αποτέλεσμα; Πλήρης λειτουργικότητα και ένα φυσικό, υγιές χαμόγελο που έχει σχεδιαστεί για να διαρκέσει μια ζωή. Η κλινική μας αυθεντία στη χειρουργική εμφυτευματολογία διασφαλίζει ότι κάθε βήμα είναι επιστημονικά τεκμηριωμένο και επικεντρωμένο στην ασφάλεια.
 
 *Απαιτείται κλινική αξιολόγηση για τον καθορισμό της καταλληλότητας της θεραπείας.*
 
 #### 🇬🇧 English
-**Title:** All-on-4 Restoration: A case of clinical precision in Athens. 🏥
+**Title:** Full Mouth Implant Rehabilitation: A holistic approach at Dentplant. 🏥
 
-**Description:** At Dentplant, restoring our patients' quality of life is our top priority. We recently completed a full-arch All-on-4 rehabilitation for a patient, combining 3D scanning technology with specialist surgical expertise.
+**Description:** Full mouth rehabilitation requires the ultimate combination of surgical precision and clinical expertise. We recently completed a complex case of total implant-supported restoration, providing our patient with a permanent solution that fully restores both masticatory function and facial aesthetics.
 
 The result? Full functionality and a natural, healthy smile designed to last a lifetime. Our clinical authority in surgical implantology ensures that every step is evidence-based and centered on patient safety.
 
 *Clinical assessment required to determine treatment candidacy.*
 
 ### 🎨 Visual Brief (Graphic Designer)
-*   **Primary Asset:** `GEN_ROOM_dentalchair_V1.jpg` (High-tech clinical environment).
+*   **Primary Asset:** `full_mouth_implant.png` (Surgical case visualization).
 *   **Aesthetic:** Clinical Authority. High contrast, cool tones, sharp focus. Subtle Dentplant watermark in the bottom right.
-*   **Rationale:** Reinforces the high-tech, sterile environment where these procedures occur, building trust through transparency.
+*   **Rationale:** Showcases the result of complex implantology, reinforcing Dentplant's position as a leader in surgical rehabilitation.
 
 ---
 
