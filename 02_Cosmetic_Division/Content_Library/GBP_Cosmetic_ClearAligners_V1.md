@@ -36,7 +36,8 @@ At our boutique clinic, easily accessible from Palaio Faliro and Nea Smyrni, we 
 
 ---
 
-## ⚖️ Compliance Status: [COMPLIANCE PASSED]
+## ⚖️ Compliance Status: [PUBLISHED]
+- **Status Date:** Published on June 3, 2026.
 - **GDPR:** No PII or patient names used.
 - **Medical Ethics (EOO Guidelines):**
   - No superlatives (avoided words like "best", "perfect results", "unrivaled").
